@@ -3,12 +3,13 @@ program SnowORMExample;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  SnowORMExample.View.Main in 'View\SnowORMExample.View.Main.pas' {Form1};
+  SnowORMExample.View.Main in 'View\SnowORMExample.View.Main.pas' {MainForm};
 
 {$R *.res}
 
 begin
+  ReportMemoryLeaksOnShutDown := True;
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.
